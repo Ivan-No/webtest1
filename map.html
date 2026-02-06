@@ -45,8 +45,11 @@
     // Add popup text
     //marker.bindPopup("This is my location").openPopup();
 
-    L.marker([18.8223698,100.6224822]).addTo(map).bindPopup("วัดภูมินทร์ <img src="joker with one tooth.gif" width=>");
-
+L.marker([18.8223698, 100.6224822])
+  .addTo(map)
+  .bindPopup(
+    'วัดภูมินทร์<br><img src="images/joker with one tooth.gif" width="200">'
+  );
     L.marker([18.7722264,100.7680237]).addTo(map).bindPopup("บ้านธนานุสร");
 
     L.marker([18.7762417,100.770759]).addTo(map).bindPopup("พิพิธภัณฑสถานแห่งชาติน่าน");
@@ -86,4 +89,5 @@
 
 </body>
 </html>
+
 
