@@ -209,6 +209,27 @@ h2 {
     `;
     }
 
+    const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
+    function setDefault(type, checked) {
+    const box = document.getElementById("chk-" + type);
+    box.checked = checked;
+
+    if (checked) {
+        map.addLayer(groups[type]);
+    } else {
+        map.removeLayer(groups[type]);
+    }
+
+    box.onchange = () => toggle(type);
+    }
+
+    // mobile: checked = show
+    // desktop: checked = show
+    ["temple", "cafe", "nature", "stay"].forEach(type => {
+    setDefault(type, true);
+    });
+
 
     // 🏯 TEMPLES
 L.marker([18.8223698,100.6224822])
