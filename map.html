@@ -138,33 +138,33 @@
     //marker.bindPopup("This is my location").openPopup();
 
     const groups = {
-  temple: L.layerGroup().addTo(map),
-  cafe: L.layerGroup().addTo(map),
-  nature: L.layerGroup().addTo(map),
-  stay: L.layerGroup().addTo(map)
-};
+    temple: L.layerGroup().addTo(map),
+    cafe: L.layerGroup().addTo(map),
+    nature: L.layerGroup().addTo(map),
+    stay: L.layerGroup().addTo(map)
+    };
 
-function toggle(type) {
-  if (map.hasLayer(groups[type])) {
-    map.removeLayer(groups[type]);
-  } else {
-    map.addLayer(groups[type]);
-  }
-}
+    function toggle(type) {
+    if (map.hasLayer(groups[type])) {
+        map.removeLayer(groups[type]);
+    } else {
+        map.addLayer(groups[type]);
+    }
+    }
 
-function popup(titleTH, titleEN, img, lat, lng, info) {
-  return `
-    <div class="popup-title">${titleTH}</div>
-    <div class="popup-en">${titleEN}</div>
-    <img src="${img}">
-    <p>${info}</p>
-    <a class="popup-btn"
-       href="https://www.google.com/maps?q=${lat},${lng}"
-       target="_blank">
-       Open in Google Maps
-    </a>
-  `;
-}
+    function popup(titleTH, titleEN, img, lat, lng, info) {
+    return `
+        <div class="popup-title">${titleTH}</div>
+        <div class="popup-en">${titleEN}</div>
+        <img src="${img}">
+        <p>${info}</p>
+        <a class="popup-btn"
+        href="https://www.google.com/maps?q=${lat},${lng}"
+        target="_blank">
+        Open in Google Maps
+        </a>
+    `;
+    }
 
 
     // 🏯 TEMPLES
@@ -400,14 +400,7 @@ L.marker([19.1358268,100.9506635])
   )
 );
 
-
-
-
 </script>
-
 
 </body>
 </html>
-
-
-
