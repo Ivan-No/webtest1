@@ -109,35 +109,6 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    const groups = {
-    temple: L.layerGroup().addTo(map),
-    cafe: L.layerGroup().addTo(map),
-    nature: L.layerGroup().addTo(map),
-    stay: L.layerGroup().addTo(map)
-    };
-
-    function toggle(type) {
-    if (map.hasLayer(groups[type])) {
-        map.removeLayer(groups[type]);
-    } else {
-        map.addLayer(groups[type]);
-    }
-    }
-
-    function popup(titleTH, titleEN, img, lat, lng, info) {
-    return `
-        <div class="popup-title">${titleTH}</div>
-        <div class="popup-en">${titleEN}</div>
-        <img src="${img}">
-        <p>${info}</p>
-        <a class="popup-btn"
-        href="https://www.google.com/maps?q=${lat},${lng}"
-        target="_blank">
-        Open in Google Maps
-        </a>
-    `;
-    }
-
     // Set map center (latitude, longitude)
     var lat = 18.842782;
     var lng = 100.657391;
@@ -155,6 +126,80 @@
     
     // Add popup text
     //marker.bindPopup("This is my location").openPopup();
+
+    const groups = {
+  temple: L.layerGroup().addTo(map),
+  cafe: L.layerGroup().addTo(map),
+  nature: L.layerGroup().addTo(map),
+  stay: L.layerGroup().addTo(map)
+};
+
+function toggle(type) {
+  if (map.hasLayer(groups[type])) {
+    map.removeLayer(groups[type]);
+  } else {
+    map.addLayer(groups[type]);
+  }
+}
+
+function popup(titleTH, titleEN, img, lat, lng, info) {
+  return `
+    <div class="popup-title">${titleTH}</div>
+    <div class="popup-en">${titleEN}</div>
+    <img src="${img}">
+    <p>${info}</p>
+    <a class="popup-btn"
+       href="https://www.google.com/maps?q=${lat},${lng}"
+       target="_blank">
+       Open in Google Maps
+    </a>
+  `;
+}
+L.marker([18.8223698,100.6224822])
+.addTo(groups.temple)
+.bindPopup(
+  popup(
+    "🏯 วัดภูมินทร์",
+    "Wat Phumin",
+    "images/joker with one tooth.gif",
+    18.8223698,100.6224822,
+    "Famous Nan temple with wall paintings."
+  )
+);
+L.marker([19.1905747,101.1962677])
+.addTo(groups.cafe)
+.bindPopup(
+  popup(
+    "☕ หยุดเวลา คาเฟ่",
+    "Time Stop Cafe",
+    "images/marker/time stop cafe.jpg",
+    19.1905747,101.1962677,
+    "Small cafe in Sapan village."
+  )
+);
+L.marker([19.1746827,101.1038714])
+.addTo(groups.nature)
+.bindPopup(
+  popup(
+    "🌄 จุดชมวิวดอยภูคา 1715",
+    "Doi Phu Kha Viewpoint 1715",
+    "images/marker/doiphuka 1715 viewpoint.jpg",
+    19.1746827,101.1038714,
+    "High viewpoint with mountain scenery."
+  )
+);
+L.marker([19.2317025,100.8821492])
+.addTo(groups.stay)
+.bindPopup(
+  popup(
+    "🏡 บ้านสะปัน",
+    "Ban Sapan",
+    "images/marker/bansapan.jpg",
+    19.2317025,100.8821492,
+    "Quiet mountain village in Nan."
+  )
+);
+
 
     L.marker([18.8223698, 100.6224822])
     .addTo(map)
