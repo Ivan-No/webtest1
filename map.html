@@ -271,10 +271,7 @@ h2 {
 function closeMoreInfo() {
   document.getElementById("info-modal").classList.add("hidden");
 }
-
-
-
-  // 🧠 CREATE ALL MARKERS
+  //CREATE ALL MARKERS
   PLACES.forEach(p => {
       L.marker([p.lat, p.lng])
           .addTo(groups[p.group])
