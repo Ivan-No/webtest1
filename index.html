@@ -75,6 +75,45 @@
             font-size: 12px;
             color: #888;
         }
+        @media (max-width: 600px) {
+            body {
+                padding-top: 20px;
+                min-height: 100vh;
+            }
+
+            .container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 0 12px;
+                align-items: stretch;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 480px;
+                padding: 18px;
+                border-radius: 8px;
+                box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+            }
+
+            a.button {
+                display: block;
+                width: calc(100% - 36px);
+                margin: 14px auto 0;
+                padding: 14px 18px;
+                font-size: 17px;
+                box-sizing: border-box;
+            }
+
+            h1 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
     </style>
 </head>
 
