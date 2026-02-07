@@ -18,6 +18,56 @@
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: system-ui, Arial, sans-serif;
+    }
+
+    h2 {
+        margin: 10px;
+        text-align: center;
+    }
+
+    #map {
+        height: calc(100vh - 60px); /* full screen minus title */
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    /* Popup style */
+    .leaflet-popup-content {
+        margin: 8px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .leaflet-popup-content img {
+        margin-top: 6px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .leaflet-popup-content-wrapper {
+        border-radius: 12px;
+    }
+
+    .leaflet-popup-tip {
+        background: white;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+        #map {
+            border-radius: 0;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -110,56 +160,7 @@ L.marker([18.8223698, 100.6224822])
 
 </script>
 
-<style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: system-ui, Arial, sans-serif;
-    }
 
-    h2 {
-        margin: 10px;
-        text-align: center;
-    }
-
-    #map {
-        height: calc(100vh - 60px); /* full screen minus title */
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    }
-
-    /* Popup style */
-    .leaflet-popup-content {
-        margin: 8px;
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .leaflet-popup-content img {
-        margin-top: 6px;
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-    .leaflet-popup-content-wrapper {
-        border-radius: 12px;
-    }
-
-    .leaflet-popup-tip {
-        background: white;
-    }
-
-    /* Mobile tweaks */
-    @media (max-width: 600px) {
-        #map {
-            border-radius: 0;
-        }
-    }
-</style>
 </body>
 </html>
 
