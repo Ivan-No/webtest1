@@ -12,123 +12,117 @@
     />
 
     <style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: system-ui, Arial, sans-serif;
-    }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: system-ui, Arial, sans-serif;
+}
 
-    h2 {
-        margin: 10px;
-        text-align: center;
-    }
+h2 {
+    margin: 10px;
+    text-align: center;
+}
 
-    #map {
-        height: calc(100vh - 60px);
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    }
+#map {
+    height: calc(100vh - 60px);
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
 
-    /* Popup box */
-    .leaflet-popup-content-wrapper {
-        border-radius: 12px;
-    }
+/* Popup box */
+.leaflet-popup-content-wrapper {
+    border-radius: 12px;
+}
 
-    .leaflet-popup-content {
-        margin: 10px;
-        text-align: center;
-        font-size: 18px;
-        line-height: 1.4;
-        width: 220px; /* fixed popup width */
-    }
+.leaflet-popup-content {
+    margin: 10px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+    width: 220px;
+}
 
-    /* Image FIX (no cut-off) */
-    .leaflet-popup-content img {
-        display: block;
-        margin: 8px auto 0;
-        width: 200px;
-        height: auto;
-        object-fit: contain;   /* IMPORTANT */
-        background: #000;      /* optional, shows empty space */
-        border-radius: 8px;
-    }
+/* Image FIX */
+.leaflet-popup-content img {
+    display: block;
+    margin: 8px auto 0;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    background: #000;
+    border-radius: 8px;
+}
 
-    .leaflet-popup-tip {
-        background: white;
-    }
+.leaflet-popup-tip {
+    background: white;
+}
 
-    @media (max-width: 600px) {
-        #map {
-            border-radius: 0;
-        }
-    }
-
-    /************************************/
-    .popup-title {
+/************************************/
+.popup-title {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 2px;
-    }
+}
 
-    .popup-en {
-        font-size: 13px;
-        color: #555;
-        margin-bottom: 6px;
-    }
+.popup-en {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 6px;
+}
 
-    .popup-btn {
+.popup-btn {
     display: inline-block;
     margin-top: 6px;
     padding: 6px 10px;
     background: #1a73e8;
-    color: #fff !important;          /* white text */
+    color: #fff !important;
     text-decoration: none !important;
     border-radius: 6px;
     font-size: 13px;
+}
+
+.popup-btn:link,
+.popup-btn:visited,
+.popup-btn:hover,
+.popup-btn:active {
+    color: #fff !important;
+}
+
+.popup-btn:hover {
+    background: #1558b0;
+}
+
+/* 📱 MOBILE (150% scale for visibility) */
+@media (max-width: 600px) {
+    #map {
+        border-radius: 0;
     }
 
-    /* force all link states */
-    .popup-btn:link,
-    .popup-btn:visited,
-    .popup-btn:hover,
-    .popup-btn:active {
-        color: #fff !important;
+    .leaflet-popup-content {
+        font-size: 27px;
+        width: 330px;
     }
 
-    .popup-btn:hover {
-        background: #1558b0;
+    .leaflet-popup-content img {
+        width: 300px;
     }
 
-    @media (max-width: 600px) {
-        #map {
-            border-radius: 0;
-        }
-
-        .leaflet-popup-content {
-            font-size: 27px;      /* 18 × 1.5 */
-            width: 330px;         /* 220 × 1.5 */
-        }
-
-        .leaflet-popup-content img {
-            width: 300px;         /* 200 × 1.5 */
-        }
-
-        .popup-title {
-            font-size: 27px;
-        }
-
-        .popup-en {
-            font-size: 19px;
-        }
-
-        .popup-btn {
-            font-size: 19px;
-            padding: 9px 15px;
-            border-radius: 9px;
-        }
+    .popup-title {
+        font-size: 27px;
     }
+
+    .popup-en {
+        font-size: 19px;
+    }
+
+    .popup-btn {
+        font-size: 19px;
+        padding: 9px 15px;
+        border-radius: 9px;
+    }
+}
 </style>
 </head>
 <body>
