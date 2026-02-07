@@ -155,113 +155,241 @@ function popup(titleTH, titleEN, img, lat, lng, info) {
     </a>
   `;
 }
+
+
+    // 🏯 TEMPLES
 L.marker([18.8223698,100.6224822])
 .addTo(groups.temple)
 .bindPopup(
   popup(
-    "🏯 วัดภูมินทร์",
+    "วัดภูมินทร์",
     "Wat Phumin",
     "images/joker with one tooth.gif",
     18.8223698,100.6224822,
-    "Famous Nan temple with wall paintings."
+    "Famous temple in Nan with old wall paintings."
   )
 );
-L.marker([19.1905747,101.1962677])
-.addTo(groups.cafe)
+
+L.marker([18.7698843,100.7480521])
+.addTo(groups.temple)
 .bindPopup(
   popup(
-    "☕ หยุดเวลา คาเฟ่",
-    "Time Stop Cafe",
-    "images/marker/time stop cafe.jpg",
-    19.1905747,101.1962677,
-    "Small cafe in Sapan village."
+    "วัดพระธาตุเขาน้อย",
+    "Wat Phra That Khao Noi",
+    "images/marker/phrathatkhaonoi temple.jpg",
+    18.7698843,100.7480521,
+    "Hilltop temple with city view."
   )
 );
+
+L.marker([19.1653656,100.93413])
+.addTo(groups.temple)
+.bindPopup(
+  popup(
+    "วัดภูเก็ต",
+    "Wat Phuket",
+    "images/marker/phuket temple.jpg",
+    19.1653656,100.93413,
+    "Temple near rice fields."
+  )
+);
+
+// 🏛️ CULTURE / PLACE
+L.marker([18.7722264,100.7680237])
+.addTo(groups.nature)
+.bindPopup(
+  popup(
+    "บ้านธนานุสร",
+    "Ban Thananusorn",
+    "images/marker/banthananusorn.jpg",
+    18.7722264,100.7680237,
+    "Local cultural house."
+  )
+);
+
+L.marker([18.7762417,100.770759])
+.addTo(groups.nature)
+.bindPopup(
+  popup(
+    "พิพิธภัณฑสถานแห่งชาติน่าน",
+    "Nan National Museum",
+    "images/marker/national museum of nan.jpg",
+    18.7762417,100.770759,
+    "History museum of Nan province."
+  )
+);
+
+L.marker([18.7762417,100.6389231])
+.addTo(groups.nature)
+.bindPopup(
+  popup(
+    "ซุ้ม ลีลาวดี",
+    "Leelawadee Area",
+    "images/marker/lilaowadee area.jpg",
+    18.7762417,100.6389231,
+    "Photo spot with flowers."
+  )
+);
+
+// 🌄 NATURE
+L.marker([19.1863116,101.1892794])
+.addTo(groups.nature)
+.bindPopup(
+  popup(
+    "จุดชมวิวสะปัน",
+    "Sapan Viewpoint",
+    "images/marker/sapan viewpoint.jpg",
+    19.1863116,101.1892794,
+    "Mountain viewpoint in Sapan."
+  )
+);
+
+L.marker([19.1905747,101.1962677])
+.addTo(groups.nature)
+.bindPopup(
+  popup(
+    "น้ำตกสะปัน",
+    "Sapan Waterfall",
+    "images/marker/sapan waterfall.jpg",
+    19.1905747,101.1962677,
+    "Small waterfall near village."
+  )
+);
+
 L.marker([19.1746827,101.1038714])
 .addTo(groups.nature)
 .bindPopup(
   popup(
-    "🌄 จุดชมวิวดอยภูคา 1715",
+    "จุดชมวิวดอยภูคา 1715",
     "Doi Phu Kha Viewpoint 1715",
     "images/marker/doiphuka 1715 viewpoint.jpg",
     19.1746827,101.1038714,
-    "High viewpoint with mountain scenery."
+    "High mountain viewpoint."
   )
 );
+
+// ☕ CAFES
+L.marker([19.1905747,101.1962677])
+.addTo(groups.cafe)
+.bindPopup(
+  popup(
+    "หยุดเวลา คาเฟ่",
+    "Time Stop Cafe",
+    "images/marker/time stop cafe.jpg",
+    19.1905747,101.1962677,
+    "Cafe in Sapan village."
+  )
+);
+
+L.marker([19.1533682,101.1551859])
+.addTo(groups.cafe)
+.bindPopup(
+  popup(
+    "ร้านหัวสะพาน",
+    "Hua Saphan Cafe",
+    "images/marker/bridge entrace shop (sapan).jpg",
+    19.1533682,101.1551859,
+    "Small cafe near bridge."
+  )
+);
+
+L.marker([19.1570835,101.1558629])
+.addTo(groups.cafe)
+.bindPopup(
+  popup(
+    "Arpo de Marng",
+    "Arpo de Marng",
+    "images/marker/arpo de marng.jpg",
+    19.1570835,101.1558629,
+    "Cafe with mountain view."
+  )
+);
+
+L.marker([19.1457335,100.9381224])
+.addTo(groups.cafe)
+.bindPopup(
+  popup(
+    "กาแฟบ้านไทลื้อ",
+    "Tai Lue House Coffee",
+    "images/marker/tailue house coffee.jpg",
+    19.1457335,100.9381224,
+    "Local style coffee shop."
+  )
+);
+
+// 🏡 STAY
 L.marker([19.2317025,100.8821492])
 .addTo(groups.stay)
 .bindPopup(
   popup(
-    "🏡 บ้านสะปัน",
+    "บ้านสะปัน",
     "Ban Sapan",
     "images/marker/bansapan.jpg",
     19.2317025,100.8821492,
-    "Quiet mountain village in Nan."
+    "Quiet mountain village."
   )
 );
 
+L.marker([19.1928271,101.1941919])
+.addTo(groups.stay)
+.bindPopup(
+  popup(
+    "อุ่นไอมาง ณ สะปัน",
+    "Aun Jai Mang at Sapan",
+    "images/marker/aunjaimang at sapan.jpg",
+    19.1928271,101.1941919,
+    "Homestay in Sapan."
+  )
+);
 
-    L.marker([18.8223698, 100.6224822])
-    .addTo(map)
-    .bindPopup(
-        'วัดภูมินทร์<br><img src="images/joker with one tooth.gif">'
-    );
+L.marker([18.9161628,100.875333])
+.addTo(groups.stay)
+.bindPopup(
+  popup(
+    "น่านเนทีฟ กิ่วม่วง",
+    "Nan Native Giwmuang",
+    "images/marker/nan native giwmuang.jpg",
+    18.9161628,100.875333,
+    "Resort near mountains."
+  )
+);
 
-    L.marker([18.7722264,100.7680237]).addTo(map)
-    .bindPopup('บ้านธนานุสร<br><img src="images/marker/banthananusorn.jpg">');
+L.marker([18.915472,100.8644056])
+.addTo(groups.stay)
+.bindPopup(
+  popup(
+    "กิ่วม่วง เมาน์เทนไฮแคมป์",
+    "Kiwmuang Mountain High Camp",
+    "images/marker/kiwmuang mountain high camp.jpg",
+    18.915472,100.8644056,
+    "Camping and nature stay."
+  )
+);
 
-    L.marker([18.7762417,100.770759]).addTo(map)
-    .bindPopup('พิพิธภัณฑสถานแห่งชาติน่าน<br><img src="images/marker/national museum of nan.jpg">');
+L.marker([18.9065846,100.928357])
+.addTo(groups.stay)
+.bindPopup(
+  popup(
+    "ศรีนาม่าน",
+    "Sri Na Man",
+    "images/marker/srinaman.jpg",
+    18.9065846,100.928357,
+    "Homestay in Nan."
+  )
+);
 
-    L.marker([18.7762417,100.6389231]).addTo(map)
-    .bindPopup('ซุ้ม ลีลาวดี<br><img src="images/marker/lilaowadee area.jpg">');
+L.marker([19.1358268,100.9506635])
+.addTo(groups.nature)
+.bindPopup(
+  popup(
+    "ฟาร์มเห็ดบ้านหัวน้ำ",
+    "Huanam Mushroom Farm",
+    "images/marker/huanam house mushroom farm.jpg",
+    19.1358268,100.9506635,
+    "Local mushroom farm."
+  )
+);
 
-    L.marker([18.7698843,100.7480521]).addTo(map)
-    .bindPopup('วัดพระธาตุเขาน้อย<br><img src="images/marker/phrathatkhaonoi temple.jpg">');
-    ////
-
-    L.marker([19.2317025,100.8821492]).addTo(map)
-    .bindPopup('บ้านสะปัน<br><img src="images/marker/bansapan.jpg">');
-
-    L.marker([19.1863116,101.1892794]).addTo(map)
-    .bindPopup('จุดชมวิวสะปัน<br><img src="images/marker/sapan viewpoint.jpg">');
-
-    L.marker([19.1928271,101.1941919]).addTo(map)
-    .bindPopup('อุ่นไอมาง ณ สะปัน<br><img src="images/marker/aunjaimang at sapan.jpg">');
-
-    L.marker([19.1905747,101.1962677]).addTo(map)
-    .bindPopup('น้ำตกสะปัน<br><img src="images/marker/sapan waterfall.jpg">');
-
-    L.marker([19.1905747,101.1962677]).addTo(map)
-    .bindPopup('หยุดเวลา คาเฟ่<br><img src="images/marker/time stop cafe.jpg">');
-
-    L.marker([19.1533682,101.1551859]).addTo(map)
-    .bindPopup('ร้านหัวสะพาน<br><img src="images/marker/bridge entrace shop (sapan).jpg">');
-
-    L.marker([19.1570835,101.1558629]).addTo(map)
-    .bindPopup('Arpo de Marng<br><img src="images/marker/arpo de marng.jpg">');
-
-    L.marker([19.1457335,100.9381224]).addTo(map)
-    .bindPopup('กาแฟบ้านไทลื้อ<br><img src="images/marker/tailue house coffee.jpg">');
-    ////
-
-    L.marker([18.9161628,100.875333]).addTo(map)
-    .bindPopup('น่านเนทีฟ กิ่วม่วง<br><img src="images/marker/nan native giwmuang.jpg">');
-
-    L.marker([18.915472,100.8644056]).addTo(map)
-    .bindPopup('กิ่วม่วง เมาน์เทนไฮแคมป์<br><img src="images/marker/kiwmuang mountain high camp.jpg">');
-
-    L.marker([18.9065846,100.928357]).addTo(map)
-    .bindPopup('ศรีนาม่าน<br><img src="images/marker/srinaman.jpg">');
-
-    L.marker([19.1358268,100.9506635]).addTo(map)
-    .bindPopup('ฟาร์มเห็ดบ้านหัวน้ำ<br><img src="images/marker/huanam house mushroom farm.jpg">');
-
-    L.marker([19.1653656,100.93413]).addTo(map)
-    .bindPopup('วัดภูเก็ต<br><img src="images/marker/phuket temple.jpg">');
-
-    L.marker([19.1746827,101.1038714]).addTo(map)
-    .bindPopup('จุดชมวิวดอยภูคา 1715<br><img src="images/marker/doiphuka 1715 viewpoint.jpg">');
 
 
 </script>
