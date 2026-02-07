@@ -151,10 +151,10 @@ h2 {
 
 <h2>Locations</h2>
 <div class="filter-bar">
-  <label><input type="checkbox" checked onchange="toggle('temple')"> 🏯 Temple</label>
-  <label><input type="checkbox" checked onchange="toggle('cafe')"> ☕ Cafe</label>
-  <label><input type="checkbox" checked onchange="toggle('nature')"> 🌄 Nature</label>
-  <label><input type="checkbox" checked onchange="toggle('stay')"> 🏡 Stay</label>
+    <label><input type="checkbox" id="chk-temple" checked>🏯 Temple</label>
+    <label><input type="checkbox" id="chk-cafe" checked>☕ Cafe</label>
+    <label><input type="checkbox" id="chk-nature" checked>🌄 Nature</label>
+    <label><input type="checkbox" id="chk-stay" checked>🏡 Stay</label>
 </div>
 <div id="map"></div>
 
@@ -162,51 +162,67 @@ h2 {
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    // Set map center (latitude, longitude)
+    // Set map center
     var lat = 18.842782;
     var lng = 100.657391;
 
     // Create map
     var map = L.map('map').setView([lat, lng], 9);
 
-    // Add map tiles
+    // Add tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap'
     }).addTo(map);
-    
-    // Add marker (pin)
-    //var marker = L.marker([lat, lng]).addTo(map);
-    
-    // Add popup text
-    //marker.bindPopup("This is my location").openPopup();
 
+    // Layer groups
     const groups = {
-    temple: L.layerGroup().addTo(map),
-    cafe: L.layerGroup().addTo(map),
-    nature: L.layerGroup().addTo(map),
-    stay: L.layerGroup().addTo(map)
+        temple: L.layerGroup().addTo(map),
+        cafe: L.layerGroup().addTo(map),
+        nature: L.layerGroup().addTo(map),
+        stay: L.layerGroup().addTo(map)
     };
 
+    // Toggle layer
     function toggle(type) {
-    if (map.hasLayer(groups[type])) {
-        map.removeLayer(groups[type]);
-    } else {
-        map.addLayer(groups[type]);
-    }
+        if (map.hasLayer(groups[type])) {
+            map.removeLayer(groups[type]);
+        } else {
+            map.addLayer(groups[type]);
+        }
     }
 
+    // 🔑 SYNC checkbox state with map on load
+    function syncLayer(type) {
+        const box = document.getElementById("chk-" + type);
+        if (!box) return;
+
+        // apply initial state
+        if (box.checked) {
+            map.addLayer(groups[type]);
+        } else {
+            map.removeLayer(groups[type]);
+        }
+
+        // listen for changes
+        box.addEventListener("change", () => toggle(type));
+    }
+
+    // run once after load
+    ["temple", "cafe", "nature", "stay"].forEach(syncLayer);
+
+    // Popup template
     function popup(titleTH, titleEN, img, lat, lng, info) {
-    return `
-        <div class="popup-title">${titleTH}</div>
-        <div class="popup-en">${titleEN}</div>
-        <img src="${img}">
-        <p>${info}</p>
-        <a class="popup-btn"
-        href="https://www.google.com/maps?q=${lat},${lng}"
-        target="_blank">
-        Open in Google Maps
-        </a>
-    `;
+        return `
+            <div class="popup-title">${titleTH}</div>
+            <div class="popup-en">${titleEN}</div>
+            <img src="${img}">
+            <p>${info}</p>
+            <a class="popup-btn"
+               href="https://www.google.com/maps?q=${lat},${lng}"
+               target="_blank">
+               Open in Google Maps
+            </a>
+        `;
     }
 
 
