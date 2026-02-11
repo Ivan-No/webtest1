@@ -92,44 +92,57 @@
         }
         /* Mobile styles */
         @media (max-width: 600px) {
-            body {
-                padding-top: 20px;
-                min-height: 100vh;
-            }
 
-            .container {
-                flex-direction: column;
-                gap: 12px;
-                padding: 0 12px;
-                align-items: stretch;
-            }
+  body {
+    padding-top: 20px;
+    min-height: 100vh;
 
-            .card {
-                width: 100%;
-                max-width: 480px;
-                padding: 18px;
-                border-radius: 8px;
-                box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-            }
+    /* background-attachment: fixed breaks on mobile */
+    background-attachment: scroll;
+  }
 
-            img {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-            }
+  .container,
+  .container1 {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 12px;
+    align-items: stretch;
+  }
 
-            a.button {
-                display: block;
-                width: calc(100% - 36px);
-                margin: 14px auto 0;
-                padding: 14px 18px;
-                font-size: 17px;
-                box-sizing: border-box;
-            }
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
 
-            h1 { font-size: 1.6rem; }
-            p { font-size: 1rem; }
-        }
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  a.button {
+    display: block;
+    width: 100%;
+    margin: 14px 0 0;
+    padding: 14px 18px;
+    font-size: 17px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
     </style>
 </head>
 
@@ -177,3 +190,4 @@
 </body>
 
 </html>
+
