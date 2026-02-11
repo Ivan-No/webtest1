@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My First Web Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +14,12 @@
             min-height: 150vh;
             margin: 0;
             padding-top: 40px;
+            /******* BACKGROUND **********/
+            background-image: url("images/background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
         }
         /*test*/
         /* shared card style */
@@ -56,14 +62,23 @@
         a.button {
             display: inline-block;
             margin-top: 20px;
-            padding: 12px 25px;
+            padding: 14px 30px;
             font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
             text-decoration: none;
             color: white;
-            background-color: #4CAF50;
-            border-radius: 8px;
-            transition: background-color 0.3s, transform 0.2s;
+            margin:10px;
+            background: linear-gradient(135deg, #4CAF50, #2e8b57);
+            border-radius: 999px;
+
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.35);
+            transition: 
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                filter 0.25s ease;
         }
+
 
         a.button:hover {
             background-color: #43a047;
@@ -91,7 +106,7 @@
 
             .card {
                 width: 100%;
-                max-width: 270px;
+                max-width: 480px;
                 padding: 18px;
                 border-radius: 8px;
                 box-shadow: 0 6px 18px rgba(0,0,0,0.12);
@@ -124,19 +139,35 @@
         <div class="card">
             <h1>จังหวัดน่าน</h1>
             <p>
-                เว็บไซต์นี้จัดทำขึ้นเพื่อเผยแพร่และส่งเสริมการอนุรักษ์วัฒนธรรมของจังหวัดน่าน
-                ปัจจุบันเว็บไซต์ยังอยู่ในช่วงระหว่างการพัฒนา
+                เว็บนี้เป็นเว็บเกี่ยวกับการอนุรักษ์วัฒนธรรมจังหวัดน่าน
+                ตอนนี้เว็บอยู่ในช่วงพัฒนา ยังไม่มีข้อมูลอะไรมากในเว็บนี้
             </p>
             <p>
             
-        </p>
-            <img src="images/nan.jpg" width="400">
-
-            <a href="map.html" class="button">Open Map</a>
-
-            <footer>
-                © testing web page 1
-            </footer>
+            </p>
+        <a href="https://u.lin.ee/fesVQZP" class="button">
+            Jump to LINE Official Account
+        </a>
+        <a href="map.html" class="button">Open Map</a>
+        <div class=img-front>
+            <img src="images/front1.jpg" width="450" >
+            <img src="images/front2.png" width="450">
+        </div>
+        <!--
+        <style>
+            .img-front {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            .img-front img {
+                align-items: center;
+            }
+        </style>
+        -->
+        <footer>
+            © testing web page 1
+        </footer>
         </div>
     </div>
 
