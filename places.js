@@ -24,7 +24,7 @@ const PLACES = [
 
     { group:"nature", lat:19.1358268, lng:100.9506635, th:"ฟาร์มเห็ดบ้านหัวน้ำ", en:"Huanam Mushroom Farm", img:"https://kindeeyunuea.com/wp-content/uploads/2022/03/baanfarmhed8.jpg", info:"ฟาร์มเห็ดของชุมชน เรียนรู้วิถีเกษตร" },
     // ===== แม่จริม =====
-    { group:"nature", lat:18.6015744, lng:100.5441754, th:"อุทยานแห่งชาติแม่จริม", en:"Mae Charim National Park", img:"images/marker/mae charim national park.jpg", info:"พื้นที่อนุรักษ์แนวเทือกเขาหลวงพระบาง" },
+    { group:"nature", lat:18.6015744, lng:100.5441754, th:"อุทยานแห่งชาติแม่จริม", en:"Mae Charim National Park", img:"https://travel.mthai.com/app/uploads/2019/06/61480441_2733943366677726_1897310285568409600_n.jpg", info:"พื้นที่อนุรักษ์แนวเทือกเขาหลวงพระบาง" },
     { group:"nature", lat:18.7146651, lng:101.0304811, th:"ภูบ่อว้า", en:"Phu Bo Wa", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60nP_iM_5iCqFfOMLtBDDBGF_PVuW75m_yw&s", info:"จุดชมวิวและกางเต็นท์สูง 1,700 ฟุต มองเห็นลำน้ำว้า" },
     { group:"temple", lat:18.7148651, lng:101.0304811, th:"วัดพระธาตุดอยหงษ์", en:"Wat Phra That Doi Hong", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_l7Smrf1nsu-qjCvvmQoGTYm7HyYk-KWZOA&s", info:"โบราณสถานศักดิ์สิทธิ์คู่บ้านคู่เมืองแม่จริม" },
     { group:"nature", lat:18.7192193, lng:100.7020088, th:"ล่องแก่งบ้านวังลูน-บ้านน้ำว้า", en:"Wang Loon–Nam Wa Rafting", img:"https://f.ptcdn.info/302/016/000/1393845584-IMG9251JPG-o.jpg", info:"เส้นทางล่องแก่งลำน้ำว้าตอนล่าง สนุกและปลอดภัย" },
