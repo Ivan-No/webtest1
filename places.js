@@ -36,7 +36,7 @@ const PLACES = [
     { group:"nature", lat:18.3034944, lng:100.7504208, th:"เสาดินนาน้อย", en:"Nan Noi Earth Pillars", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7dsN0WhA3QnvJGuASwy7ZzrmKYIwNbDBJsg&s", info:"เสาดินธรรมชาติจากการกัดเซาะยาวนานกว่า 30,000 ปี" },
     { group:"temple", lat:18.2688302, lng:100.5764829, th:"วัดถ้ำเชตวัน", en:"Wat Tham Chetawan", img:"https://mpics.mgronline.com/pics/Images/566000008099304.JPEG", info:"วัดล้านนาผสมพม่า ตั้งอยู่ท่ามกลางหุบเขา" },
 
-    // ===== ปัว =====
+    // ===== ปัว ======
     { group:"nature", lat:19.1368806, lng:100.9551558, th:"วังศิลาแลง", en:"Wang Sila Laeng", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2FhngRhOFWD2e_YdtCzB2q9nVRoNF7c8lBw&s", info:"แกรนด์แคนยอนเมืองน่าน โขดหินรูปทรงแปลกตา" },
     { group:"nature", lat:19.1985923, lng:101.0777405, th:"อุทยานแห่งชาติดอยภูคา", en:"Doi Phu Kha National Park", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTbHymOHeIEyOgx06qBd1fqrrfetbcY67Sg&s", info:"ชมดอกชมพูภูคาและธรรมชาติภูเขาสูง" },
 
