@@ -266,7 +266,44 @@
     </div>
 </div>
 
+<div id="video" style="
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;">
+
+    <div class="card" style="max-width:800px; width:90%;">
+
+        <!-- ADD id="popupVideo" -->
+        <video id="popupVideo" width="100%" controls autoplay>
+            <source src="videos/rggyu.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <br><br>
+        <button onclick="closeVideo(); closePopup();">ปิด</button>
+
+    </div>
+</div>
+
 <script>
+function closeVideo() {
+    const v = document.getElementById("popupVideo");
+    v.pause();          // stop video
+    v.currentTime = 0;  // rewind to start
+    document.getElementById("video").style.display = "none";
+}
+
+function showVideo() {
+    const v = document.getElementById("popupVideo");
+    document.getElementById("video").style.display = "flex";
+    v.play();
+}
+
 function openPopup(item) {
     document.getElementById("popup-title").innerText = item;
     document.getElementById("popup").style.display = "flex";
