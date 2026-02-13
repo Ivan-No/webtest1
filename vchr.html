@@ -146,7 +146,7 @@
                 height: auto;
                 max-width: 100%;
             }
-
+            
             a.button {
                 display: block;
                 width: calc(100% - 36px);
@@ -155,52 +155,49 @@
                 font-size: 17px;
                 box-sizing: border-box;
             }
-
+            
             h1 { font-size: 1.6rem; }
             p { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-
-    <div class="card">
-        <h1>กาแฟดอยมณีพฤกษ์</h1>
-        <p>500 g</p>
-        <p><strong>200 โทเค็น</strong></p>
-        <button onclick="openPopup('กาแฟดอยมณีพฤกษ์ 500 g')">แลกวอเชอร์</button>
+    
+    <div class="container1">
+        <div class="card">
+            <h1>ถุงผ้าลายน้องน่านใจ</h1>
+            <p>12 × 14 นิ้ว</p>
+            <img src="images/the bag.jpg" width="250">
+            <p><strong>3 โทเค็น</strong></p>
+            <button onclick="openPopup('ถุงผ้าลายน้องน่านใจ')">แลกวอเชอร์</button>
+        </div>
+        <div class="card">
+            <h1>ตุ๊กตาน้องน่านใจ</h1>
+            <p>สูง 30 cm</p>
+            <img src="images/the doll.jpg" width="250">
+            <p><strong>10 โทเค็น</strong></p>
+            <button onclick="openPopup('ตุ๊กตาน้องน่านใจ 30 cm')">แลกวอเชอร์</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <h1>หมวกน่านโก</h1>
+            <img src="images/the hat.jpg" width="250">
+            <p><strong>5 โทเค็น</strong></p>
+            <button onclick="openPopup('ลุ้นทอง')">แลกวอเชอร์</button>
+        </div>
+        <div class="card">
+            <h1>ลุ้นทอง</h1>
+            <p><strong>5 โทเค็น</strong></p>
+            <button onclick="openPopup('ลุ้นทอง')">แลกวอเชอร์</button>
+        </div>
+    
+    
     </div>
 
-    <div class="card">
-        <h1>เกลือสินเธาว์ภูเขา</h1>
-        <p>แบบคัดดอก 1 kg</p>
-        <p><strong>15 โทเค็น</strong></p>
-        <button onclick="openPopup('เกลือสินเธาว์ภูเขา 1 kg')">แลกวอเชอร์</button>
-    </div>
-
-</div>
-
-<div class="container">
-
-    <div class="card">
-        <h1>ไกยม (สาหร่ายทอด)</h1>
-        <p>20 g</p>
-        <p><strong>3 โทเค็น</strong></p>
-        <button onclick="openPopup('ไกยม 20 g')">แลกวอเชอร์</button>
-    </div>
-
-    <div class="card">
-        <h1>ไกด์นำเที่ยว</h1>
-        <p>1 วัน</p>
-        <p><strong>40 โทเค็น</strong></p>
-        <button onclick="openPopup('ไกด์นำเที่ยว 1 วัน')">แลกวอเชอร์</button>
-    </div>
-
-</div>
-
-<div class="container">
-
+    <div class="container">
+    
     <div class="card">
         <h1>ซิ่นไทลื้อแบบโบราณ</h1>
         <p><strong>75 โทเค็น</strong></p>
@@ -216,31 +213,6 @@
 
 </div>
 
-<div class="container">
-
-    <div class="card">
-        <h1>ลุ้นทอง</h1>
-        <p><strong>5 โทเค็น</strong></p>
-        <button onclick="openPopup('ลุ้นทอง')">แลกวอเชอร์</button>
-    </div>
-
-    <div class="card">
-        <h1>ตุ๊กตาน้องน่านใจ</h1>
-        <p>สูง 30 cm</p>
-        <p><strong>10 โทเค็น</strong></p>
-        <button onclick="openPopup('ตุ๊กตาน้องน่านใจ 30 cm')">แลกวอเชอร์</button>
-    </div>
-
-</div>
-
-<div class="container1">
-    <div class="card">
-        <h1>ถุงผ้าลายน้องน่านใจ</h1>
-        <p>12 × 14 นิ้ว</p>
-        <p><strong>3 โทเค็น</strong></p>
-        <button onclick="openPopup('ถุงผ้าลายน้องน่านใจ')">แลกวอเชอร์</button>
-    </div>
-</div>
 
 <footer>
     วอเชอร์เพื่อการศึกษาเท่านั้น
@@ -259,7 +231,7 @@
 ">
     <div class="card">
         <h1 id="popup-title"></h1>
-        <p>กดที่คูปองเพื่อรับโทเค่น</p>
+        <p>กดที่คูปองเพื่อแลกของรางวัล</p>
         <a onclick="showVideo()" target="_blank">
             <img src="images/gift card.png" alt="Gift Card"
                 style="width:100%; max-width:300px; cursor:pointer; transition:transform .2s;">
